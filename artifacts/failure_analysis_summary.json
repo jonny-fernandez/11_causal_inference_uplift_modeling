@@ -1,0 +1,63 @@
+{
+  "balance": {
+    "maximum_abs_weighted_smd": 0.0038535221511476,
+    "mean_abs_weighted_smd": 0.001265945640656402,
+    "residual_balance_threshold": 0.1,
+    "residual_imbalance_count": 0,
+    "worst_weighted_covariate": "department=People"
+  },
+  "failure_flags": {
+    "extreme_weights_detected": false,
+    "ground_truth_ci_failure_detected": false,
+    "poor_overlap_detected": false,
+    "residual_imbalance_detected": false
+  },
+  "ground_truth_recovery": {
+    "adjusted_estimator_count": 3,
+    "all_adjusted_cis_cover_true_ate": true,
+    "best_adjusted_absolute_error_pp": 1.026702550150589,
+    "best_adjusted_estimator": "stabilized_ipw",
+    "worst_adjusted_absolute_error_pp": 1.1542861309757415,
+    "worst_adjusted_estimator": "cross_fitted_aipw"
+  },
+  "heterogeneity_signal": {
+    "crossfit_outcome_model_contrast_maximum": 0.2613678760036561,
+    "crossfit_outcome_model_contrast_minimum": -0.06634181569938041,
+    "crossfit_outcome_model_contrast_std": 0.045274318571524585,
+    "note": "This is a diagnostic only. The out-of-fold outcome-model contrast is not yet the selected CATE/uplift estimator.",
+    "proxy_mae_vs_true_ite": 0.03907838804122755,
+    "proxy_vs_true_ite_correlation": 0.2711995502736108,
+    "true_ite_maximum": 0.17,
+    "true_ite_minimum": 0.05,
+    "true_ite_std": 0.031519186090671246
+  },
+  "overlap": {
+    "lower_threshold": 0.1,
+    "maximum_oof_propensity": 0.6460462803671025,
+    "maximum_propensity": 0.6363363608934912,
+    "minimum_oof_propensity": 0.2280729317001635,
+    "minimum_propensity": 0.2225380917635109,
+    "poor_overlap_count": 0,
+    "poor_overlap_fraction": 0.0,
+    "upper_threshold": 0.9
+  },
+  "policy": "Failure analysis is diagnostic. Synthetic truth is used only to measure recovery and expose weaknesses, not to retroactively choose an estimator because it looks best.",
+  "propensity_recovery": {
+    "large_error_count": 244,
+    "large_error_fraction": 0.0488,
+    "large_error_threshold": 0.05,
+    "mae": 0.02088232042588042,
+    "maximum_absolute_error": 0.09976820672060704,
+    "rmse": 0.025782741019799424
+  },
+  "weights": {
+    "extreme_weight_count": 0,
+    "extreme_weight_fraction": 0.0,
+    "extreme_weight_threshold": 2.0,
+    "maximum": 1.977189597130112,
+    "median": 0.9858569376737372,
+    "minimum": 0.6914582083321282,
+    "p95": 1.2250494040078495,
+    "p99": 1.357325477040222
+  }
+}

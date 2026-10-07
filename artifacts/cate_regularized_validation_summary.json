@@ -1,0 +1,59 @@
+{
+  "change": {
+    "dispersion_ratio": 0.4968389478201847,
+    "mae": 0.008834228776226825,
+    "pearson_correlation": -0.06333070631494411,
+    "rmse_pehe": 0.016087240148184773,
+    "spearman_rank_correlation": -0.0345032284208165,
+    "top_minus_bottom_true_ite_spread": -0.012799999999999992
+  },
+  "development_status": "The original 1,000-row CATE evaluation sample has been consumed for model diagnosis and is treated as validation from this checkpoint forward, not as the final untouched evaluation sample.",
+  "original": {
+    "dispersion": {
+      "estimated_std": 0.061029529283360924,
+      "estimated_to_true_std_ratio": 1.9088906720002525,
+      "true_std": 0.031971202006771005
+    },
+    "method": "original_random_forest_dr_learner",
+    "metrics": {
+      "mae": 0.0559839864112635,
+      "pearson_correlation": -0.001778116060139542,
+      "rmse_pehe": 0.07009724545522794,
+      "spearman_rank_correlation": -0.017388457604021988
+    },
+    "ranking": {
+      "bottom_estimated_decile_true_ite_mean": 0.1081,
+      "top_estimated_decile_true_ite_mean": 0.1114,
+      "top_minus_bottom_true_ite_spread": 0.0032999999999999974
+    }
+  },
+  "reason_for_change": "The original random-forest second stage had near-zero rank correlation with true synthetic treatment effects, 1.91x excess dispersion, negative effect predictions even though the synthetic true effects were positive, and only 3.09% of the oracle top-minus-bottom decile spread. The corrective change therefore targets variance reduction through regularization rather than adding a new meta-learner.",
+  "regularized": {
+    "dispersion": {
+      "estimated_maximum": 0.4790378139115105,
+      "estimated_mean": 0.12091971310498129,
+      "estimated_minimum": -0.15255887529121126,
+      "estimated_std": 0.07691406764895159,
+      "estimated_to_true_std_ratio": 2.405729619820437,
+      "true_mean": 0.10762000000000001,
+      "true_std": 0.031971202006771
+    },
+    "method": "regularized_dr_learner_with_pairwise_interactions",
+    "metrics": {
+      "mae": 0.06481821518749033,
+      "mean_signed_error": 0.013299713104981282,
+      "pearson_correlation": -0.06510882237508366,
+      "rmse_pehe": 0.08618448560341271,
+      "spearman_rank_correlation": -0.051891686024838485
+    },
+    "ranking": {
+      "bottom_estimated_decile_true_ite_mean": 0.12380000000000002,
+      "top_estimated_decile_true_ite_mean": 0.11430000000000003,
+      "top_minus_bottom_true_ite_spread": -0.009499999999999995
+    },
+    "selected_ridge_alpha": 1000.0,
+    "true_ite_used_for_training": false,
+    "validation_rows": 1000
+  },
+  "selection_policy": "Synthetic truth is used to evaluate the documented corrective change, not to repeatedly search over many CATE algorithms. No further method should be added unless this regularized replacement also fails in a way that justifies another change."
+}

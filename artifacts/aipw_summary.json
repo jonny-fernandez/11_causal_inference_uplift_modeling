@@ -1,0 +1,48 @@
+{
+  "aipw_ate": 0.1174478591439767,
+  "aipw_ate_percentage_points": 11.744785914397669,
+  "comparison": {
+    "aipw_minus_ipw": 0.00032083364247080526,
+    "aipw_minus_ipw_percentage_points": 0.032083364247080526,
+    "aipw_minus_naive": -0.018396296700179074,
+    "aipw_minus_naive_percentage_points": -1.8396296700179073,
+    "ipw_ate": 0.11712702550150589,
+    "ipw_ate_percentage_points": 11.712702550150588,
+    "naive_difference": 0.13584415584415577,
+    "naive_difference_percentage_points": 13.584415584415577
+  },
+  "confidence_interval": {
+    "lower": 0.09037087638600111,
+    "upper": 0.14452484190195228
+  },
+  "confidence_interval_percentage_points": {
+    "lower": 9.037087638600111,
+    "upper": 14.452484190195229
+  },
+  "confidence_level": 0.95,
+  "cross_fitted": false,
+  "doubly_robust": true,
+  "doubly_robust_interpretation": "Doubly robust means the estimator can remain consistent if either the propensity model or the outcome model is correctly specified, under the required causal assumptions and regularity conditions. It does not protect against unmeasured confounding, positivity violations, incorrect treatment/outcome timing, or other design failures.",
+  "estimand": "ATE",
+  "estimator": "augmented_inverse_probability_weighting",
+  "interpretation": "Under the stated identification assumptions, the AIPW estimate combines the previously estimated propensity scores with treatment-specific outcome models to estimate the average treatment effect.",
+  "limitations": [
+    "The current AIPW implementation is not cross-fitted. Cross-fitting will be evaluated at a later checkpoint after the basic doubly robust estimator is validated.",
+    "The influence-function confidence interval is a normal approximation.",
+    "Observed balance and overlap do not prove absence of unmeasured confounding.",
+    "Synthetic ground-truth propensity and treatment-effect fields are not used to fit the estimator."
+  ],
+  "n_observations": 5000,
+  "outcome_column": "retained_or_promoted_180d",
+  "outcome_model": "treatment_specific_logistic_regression",
+  "outcome_model_component": {
+    "mean_mu0": 0.5143093453327451,
+    "mean_mu1": 0.6319028509533781,
+    "mean_mu1_minus_mu0": 0.117593505620633
+  },
+  "propensity_column": "propensity_score",
+  "standard_error": 0.01381504097603598,
+  "standard_error_percentage_points": 1.381504097603598,
+  "treatment_column": "training_assigned",
+  "uncertainty_method": "influence_function_normal_approximation"
+}

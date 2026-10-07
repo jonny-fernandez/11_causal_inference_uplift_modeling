@@ -1,0 +1,4 @@
+openai>=1.0
+python-dotenv>=1.0
+shap>=0.46
+xgboost>=2.1

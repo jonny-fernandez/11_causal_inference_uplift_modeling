@@ -1,0 +1,14 @@
+column,dtype
+person_id,object
+department,object
+job_level,object
+tenure_months,int64
+baseline_performance,float64
+baseline_engagement,float64
+prior_training_hours_12m,float64
+remote_work_ratio,float64
+training_assigned,int64
+retained_or_promoted_180d,int64
+post_training_completion,int64
+true_propensity,float64
+true_individual_treatment_effect,float64

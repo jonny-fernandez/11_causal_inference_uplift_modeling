@@ -1,0 +1,31 @@
+{
+  "diagnostic_interpretation": "The reported overlap, covariate balance, stabilized-weight, and effective-sample-size diagnostics passed the project criteria. These diagnostics support the observed-data implementation but do not establish the absence of unmeasured confounding.",
+  "evidence_fact_ids": [
+    "primary_effect",
+    "confidence_interval",
+    "sensitivity",
+    "balance",
+    "overlap",
+    "weights",
+    "identification_limitations",
+    "subgroup_hte",
+    "individual_cate",
+    "synthetic_truth",
+    "ai_boundary"
+  ],
+  "executive_interpretation": "Under the stated identification assumptions, the locked primary analysis supports a positive average treatment effect, with the reported confidence interval remaining above the null. Sensitivity estimates were described as tightly clustered.",
+  "guardrail_checks": {
+    "calculated_new_causal_values": false,
+    "claimed_unmeasured_confounding_absent": false,
+    "invented_causal_mechanism": false,
+    "overrode_deterministic_diagnostics": false,
+    "recommended_individual_targeting": false
+  },
+  "heterogeneity_interpretation": "Predefined subgroup heterogeneity was retained as descriptive analysis. Individual treatment-effect targeting was rejected following validation failures and should not be used for individual-level decisions.",
+  "limitations": [
+    "Causal interpretation depends on consistency, conditional exchangeability, positivity, no interference, correct temporal ordering, and appropriate model implementation.",
+    "Observed diagnostics cannot rule out unmeasured confounding.",
+    "Synthetic ground truth was evaluation-only and does not replace identification assumptions.",
+    "No raw row-level records were supplied to the interpretation layer."
+  ]
+}

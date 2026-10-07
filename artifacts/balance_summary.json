@@ -1,0 +1,24 @@
+{
+  "balance_threshold": 0.1,
+  "balance_threshold_rule": "|SMD| < 0.10",
+  "comparison": {
+    "all_post_weighting_rows_below_threshold": true,
+    "rows_improved": 12,
+    "rows_not_improved": 1
+  },
+  "estimand": "ATE",
+  "interpretation": "Post-weighting balance diagnostics evaluate observed pre-treatment covariates only. Good observed balance is necessary evidence for the weighting design but does not prove absence of unmeasured confounding.",
+  "n_balance_rows": 13,
+  "post_weighting": {
+    "maximum_abs_smd": 0.0038535221511476277,
+    "mean_abs_smd": 0.0012659456406564425,
+    "rows_at_or_above_threshold": 0
+  },
+  "pre_weighting": {
+    "maximum_abs_smd": 0.18111678305396148,
+    "mean_abs_smd": 0.054470073162023666,
+    "rows_at_or_above_threshold": 2
+  },
+  "standardization_policy": "The raw treated/control pooled standard deviation or pooled binary-proportion standard deviation is used as the common reference denominator for both pre- and post-weighting SMDs. This keeps before/after SMDs on the same scale.",
+  "weight_column": "ate_stabilized_ipw"
+}

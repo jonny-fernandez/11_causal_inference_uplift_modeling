@@ -1,0 +1,24 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local/editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated/runtime
+outputs/*
+!outputs/.gitkeep
+artifacts/*.joblib
+artifacts/*.pkl
+artifacts/*.bin
+logs/

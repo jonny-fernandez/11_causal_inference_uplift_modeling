@@ -1,0 +1,77 @@
+{
+  "project": "11_causal_inference_uplift_modeling",
+  "status": "methodology_locked",
+  "primary_estimand": "ATE",
+  "primary_estimator": "cross_fitted_augmented_inverse_probability_weighting",
+  "primary_estimator_reason": "Selected because it combines propensity and outcome modeling, uses honest out-of-fold nuisance predictions, and remained stable relative to IPW and non-cross-fitted AIPW. It was not selected because it produced the largest estimate or the smallest synthetic-truth error.",
+  "reference_estimators": [
+    "naive_difference_in_means",
+    "stabilized_inverse_probability_weighting",
+    "augmented_inverse_probability_weighting"
+  ],
+  "primary_effect_summary": {
+    "estimate": 0.118403,
+    "estimate_percentage_points": 11.8403,
+    "standard_error": 0.013883,
+    "confidence_level": 0.95,
+    "confidence_interval": {
+      "lower": 0.091193,
+      "upper": 0.145612
+    },
+    "confidence_interval_percentage_points": {
+      "lower": 9.1193,
+      "upper": 14.5612
+    }
+  },
+  "observed_data_diagnostics": {
+    "propensity_overlap": "acceptable",
+    "poor_overlap_rows": 0,
+    "extreme_stabilized_weights_over_2": 0,
+    "effective_sample_size_fraction": 0.985,
+    "post_weighting_rows_at_or_above_abs_smd_0_10": 0,
+    "maximum_post_weighting_abs_smd": 0.003834
+  },
+  "sensitivity_summary": {
+    "estimate_range_percentage_points": {
+      "minimum": 11.6,
+      "maximum": 11.84
+    },
+    "range_width_percentage_points": 0.24,
+    "largest_propensity_sensitivity_shift_percentage_points": -0.12,
+    "all_estimates_positive": true
+  },
+  "synthetic_ground_truth_policy": {
+    "used_for_training": false,
+    "used_for_estimation": false,
+    "used_for_evaluation_only": true
+  },
+  "heterogeneous_effects": {
+    "individual_cate_status": "rejected_for_final_targeting",
+    "individual_cate_reason": "Multiple defensible CATE approaches failed to recover reliable individual-level treatment-benefit ranking on validation data.",
+    "uplift_qini_auuc_status": "not_reported_as_success_metric",
+    "subgroup_hte_status": "retained",
+    "retained_subgroups": [
+      "department",
+      "job_level",
+      "baseline_performance_tertile",
+      "baseline_engagement_tertile"
+    ],
+    "subgroup_interpretation": "Use as descriptive, predeclared heterogeneous-treatment-effect analysis; do not treat subgroup estimates as individual treatment guarantees."
+  },
+  "rejected_methods": [
+    {
+      "method": "random_forest_dr_learner",
+      "reason": "Near-zero ranking correlation and excessive CATE dispersion."
+    },
+    {
+      "method": "regularized_dr_learner",
+      "reason": "Worse ranking recovery and greater dispersion."
+    },
+    {
+      "method": "interaction_s_learner",
+      "reason": "Improved calibration but negative ranking correlation and negative top-bottom true-effect spread."
+    }
+  ],
+  "final_interpretation_policy": "Report causal estimates only under the stated identification assumptions. Observed balance, overlap, stable weighting, cross-fitting, and sensitivity analysis support the adjustment design but do not prove absence of unmeasured confounding.",
+  "methodology_change_policy": "Do not alter the primary estimand, primary estimator, feature policy, overlap policy, or heterogeneous-effect conclusions after this lock unless a reproducibility bug or technical defect is discovered."
+}

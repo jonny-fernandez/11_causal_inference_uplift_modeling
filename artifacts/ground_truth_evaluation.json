@@ -1,0 +1,37 @@
+{
+  "ate_recovery": {
+    "all_adjusted_confidence_intervals_cover_true_ate": true,
+    "best_adjusted_absolute_error": 0.010267025501505891,
+    "best_adjusted_absolute_error_percentage_points": 1.026702550150589,
+    "best_adjusted_estimator_by_absolute_error": "stabilized_ipw",
+    "n_adjusted_estimators_compared": 3,
+    "n_estimators_compared": 4
+  },
+  "evaluation_only": true,
+  "ground_truth_used_for_estimation": false,
+  "ground_truth_used_for_training": false,
+  "policy": "Synthetic truth is used only after estimator construction to evaluate recovery. Do not retune the causal pipeline merely to minimize error against the known synthetic truth.",
+  "propensity_recovery": {
+    "estimated_propensity_max": 0.6363363608934912,
+    "estimated_propensity_mean": 0.4399939629478874,
+    "estimated_propensity_min": 0.2225380917635109,
+    "mae": 0.02088232042588042,
+    "mean_signed_error": 0.0034758629478873885,
+    "pearson_correlation": 0.9557193927301195,
+    "rmse": 0.025782741019799424,
+    "true_propensity_max": 0.6886,
+    "true_propensity_mean": 0.4365181000000001,
+    "true_propensity_min": 0.1869
+  },
+  "true_effect_summary": {
+    "true_ate": 0.10686,
+    "true_ate_percentage_points": 10.686,
+    "true_ite_maximum": 0.17,
+    "true_ite_mean": 0.10686,
+    "true_ite_median": 0.12,
+    "true_ite_minimum": 0.05,
+    "true_ite_p05": 0.05,
+    "true_ite_p95": 0.17,
+    "true_ite_std": 0.031519186090671246
+  }
+}

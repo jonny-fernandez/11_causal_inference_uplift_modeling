@@ -1,0 +1,43 @@
+{
+  "adjustment_change": -0.01871713034264988,
+  "adjustment_change_percentage_points": -1.871713034264988,
+  "causal_interpretation": "Under the stated identification assumptions, the IPW estimate represents the estimated average treatment effect of training assignment on the probability of retention or promotion within 180 days.",
+  "estimand": "ATE",
+  "estimator": "stabilized_inverse_probability_weighting",
+  "ipw_ate": 0.11712702550150589,
+  "ipw_ate_percentage_points": 11.712702550150588,
+  "limitations": [
+    "This estimate relies on conditional exchangeability given the approved pre-treatment covariates.",
+    "Observed covariate balance does not prove absence of unmeasured confounding.",
+    "The confidence interval is a nonparametric bootstrap percentile interval.",
+    "The propensity model is refit within each bootstrap replicate.",
+    "Synthetic ground-truth treatment-effect fields were not used to calculate this estimate or its uncertainty."
+  ],
+  "n_observations": 5000,
+  "naive_difference": 0.13584415584415577,
+  "naive_difference_percentage_points": 13.584415584415577,
+  "outcome_column": "retained_or_promoted_180d",
+  "treatment_column": "training_assigned",
+  "uncertainty": {
+    "bootstrap_mean": 0.11754520851543276,
+    "bootstrap_mean_percentage_points": 11.754520851543276,
+    "bootstrap_random_state": 42,
+    "bootstrap_resamples": 1000,
+    "confidence_interval": {
+      "lower": 0.0905184635452801,
+      "upper": 0.14414702496739842
+    },
+    "confidence_interval_percentage_points": {
+      "lower": 9.05184635452801,
+      "upper": 14.414702496739842
+    },
+    "confidence_level": 0.95,
+    "method": "nonparametric_percentile_bootstrap_with_propensity_refitting",
+    "standard_error": 0.01385047620391771,
+    "standard_error_percentage_points": 1.385047620391771
+  },
+  "uncertainty_status": "estimated",
+  "weight_column": "ate_stabilized_ipw",
+  "weighted_control_outcome_mean": 0.5143074688181611,
+  "weighted_treated_outcome_mean": 0.631434494319667
+}

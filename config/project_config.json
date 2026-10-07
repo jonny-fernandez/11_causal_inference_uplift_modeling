@@ -1,0 +1,13 @@
+{
+  "project_number": 11,
+  "project_name": "Causal Inference & Uplift Modeling",
+  "random_seed": 42,
+  "treatment": "training_assigned",
+  "outcome": "retained_or_promoted_180d",
+  "id_column": "person_id",
+  "minimum_propensity": 0.05,
+  "maximum_propensity": 0.95,
+  "minimum_subgroup_size": 100,
+  "synthetic_ground_truth_effect_column": "true_individual_treatment_effect",
+  "synthetic_data_only": true
+}

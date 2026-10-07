@@ -1,0 +1,13 @@
+metric,value,unit
+Primary cross-fitted AIPW ATE,11.840286130975741,percentage_points
+Primary CI lower,9.119335037344934,percentage_points
+Primary CI upper,14.561237224606549,percentage_points
+Naive difference,13.584415584415577,percentage_points
+IPW ATE,11.712702550150588,percentage_points
+AIPW ATE,11.744785914397669,percentage_points
+Synthetic true ATE,10.686,percentage_points
+Primary estimator error vs synthetic truth,1.1542861309757413,percentage_points
+Effective sample size retained,98.46342023085228,percent
+Maximum post-weighting |SMD|,0.0038535221511476277,smd
+Sensitivity range width,0.2432264660726986,percentage_points
+Subgroup mean absolute error,1.7261535729212258,percentage_points

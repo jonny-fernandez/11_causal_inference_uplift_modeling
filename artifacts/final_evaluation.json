@@ -1,0 +1,65 @@
+{
+  "ai_used_for_calculation": false,
+  "cate_attempts": {
+    "final_individual_targeting_accepted": false,
+    "interaction_s_learner_available": true,
+    "random_forest_dr_learner_available": true,
+    "regularized_dr_learner_available": true
+  },
+  "diagnostics": {
+    "effective_sample_size_fraction": 0.9846342023085228,
+    "extreme_weight_count": 0,
+    "maximum_post_weighting_abs_smd": 0.0038535221511476277,
+    "poor_overlap_rows": 0,
+    "post_weighting_rows_at_or_above_abs_smd_0_10": 0,
+    "propensity_maximum": 0.6363363608934912,
+    "propensity_minimum": 0.22253809176351097,
+    "propensity_overlap_valid": true
+  },
+  "evaluation_status": "complete",
+  "final_interpretation": "Under the stated identification assumptions, the locked cross-fitted AIPW analysis estimates that training assignment increased the probability of retention or promotion within 180 days by approximately 11.84 percentage points. Observed overlap, covariate balance, weight stability, estimator agreement, and sensitivity analysis support the adjustment design, but do not prove absence of unmeasured confounding. Individual-level CATE/uplift ranking was rejected after validation failures; predefined subgroup HTE analysis was retained.",
+  "heterogeneous_effects": {
+    "all_subgroup_cis_cover_true_effect": true,
+    "individual_cate_status": "rejected_for_final_targeting",
+    "subgroup_hte_status": "retained",
+    "subgroup_mean_absolute_error_percentage_points": 1.7261535729212258,
+    "subgroup_rows": 14,
+    "uplift_qini_auuc_status": "not_reported_as_success_metric"
+  },
+  "methodology_locked": true,
+  "primary_estimand": "ATE",
+  "primary_estimator": "cross_fitted_augmented_inverse_probability_weighting",
+  "primary_result": {
+    "confidence_interval_percentage_points": {
+      "lower": 9.119335037344934,
+      "upper": 14.561237224606549
+    },
+    "confidence_level": 0.95,
+    "estimate": 0.11840286130975741,
+    "estimate_percentage_points": 11.840286130975741,
+    "standard_error": 0.013882658636042926,
+    "standard_error_percentage_points": 1.3882658636042926
+  },
+  "project": "11_causal_inference_uplift_modeling",
+  "reference_estimators": {
+    "aipw_ate_percentage_points": 11.744785914397669,
+    "crossfit_aipw_ate_percentage_points": 11.840286130975741,
+    "ipw_ate_percentage_points": 11.712702550150588,
+    "naive_difference_percentage_points": 13.584415584415577
+  },
+  "sensitivity": {
+    "all_estimates_positive": true,
+    "largest_absolute_propensity_shift_percentage_points": 0.11564288524754662,
+    "maximum_estimate_percentage_points": 11.840286130975741,
+    "minimum_estimate_percentage_points": 11.597059664903043,
+    "range_width_percentage_points": 0.2432264660726986
+  },
+  "synthetic_ground_truth_evaluation": {
+    "all_adjusted_confidence_intervals_cover_true_ate": true,
+    "evaluation_only": true,
+    "primary_estimator_signed_error_percentage_points": 1.1542861309757413,
+    "true_ate_percentage_points": 10.686,
+    "used_for_estimation": false,
+    "used_for_training": false
+  }
+}

@@ -1,0 +1,14 @@
+column,policy,reason
+person_id,EXCLUDED_IDENTIFIER,Identifier only.
+department,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+job_level,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+tenure_months,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+baseline_performance,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+baseline_engagement,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+prior_training_hours_12m,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+remote_work_ratio,PRE_TREATMENT_COVARIATE,Measured before treatment assignment.
+training_assigned,TREATMENT,Binary treatment indicator.
+retained_or_promoted_180d,OUTCOME,Binary outcome.
+post_training_completion,EXCLUDED_POST_TREATMENT,Occurs after assignment and would bias causal estimates.
+true_propensity,EVALUATION_ONLY,"Synthetic ground truth, never an estimation feature."
+true_individual_treatment_effect,EVALUATION_ONLY,"Synthetic ground truth, never an estimation feature."

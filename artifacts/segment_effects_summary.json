@@ -1,0 +1,70 @@
+{
+  "all_segment_cis_cover_true_effect": true,
+  "confidence_level": 0.95,
+  "family_recovery": [
+    {
+      "all_cis_cover_true_effect": true,
+      "estimated_effect_range": 0.035713643083363764,
+      "estimated_effect_range_percentage_points": 3.5713643083363764,
+      "groups": 3,
+      "mean_absolute_error": 0.011542427775380365,
+      "mean_absolute_error_percentage_points": 1.1542427775380364,
+      "pearson_estimated_vs_true": 0.9669367514050955,
+      "segment_family": "baseline_engagement_tertile",
+      "true_effect_range": 0.03860591987244809,
+      "true_effect_range_percentage_points": 3.860591987244809
+    },
+    {
+      "all_cis_cover_true_effect": true,
+      "estimated_effect_range": 0.008923934029064731,
+      "estimated_effect_range_percentage_points": 0.8923934029064731,
+      "groups": 3,
+      "mean_absolute_error": 0.011541941696208188,
+      "mean_absolute_error_percentage_points": 1.1541941696208189,
+      "pearson_estimated_vs_true": -0.4670433328169006,
+      "segment_family": "baseline_performance_tertile",
+      "true_effect_range": 0.002002447049605671,
+      "true_effect_range_percentage_points": 0.20024470496056712
+    },
+    {
+      "all_cis_cover_true_effect": true,
+      "estimated_effect_range": 0.08041501175169105,
+      "estimated_effect_range_percentage_points": 8.041501175169104,
+      "groups": 5,
+      "mean_absolute_error": 0.023930328036132275,
+      "mean_absolute_error_percentage_points": 2.393032803613228,
+      "pearson_estimated_vs_true": 0.6757479179647553,
+      "segment_family": "department",
+      "true_effect_range": 0.002481962481962488,
+      "true_effect_range_percentage_points": 0.2481962481962488
+    },
+    {
+      "all_cis_cover_true_effect": true,
+      "estimated_effect_range": 0.03953414926739429,
+      "estimated_effect_range_percentage_points": 3.953414926739429,
+      "groups": 3,
+      "mean_absolute_error": 0.017585583871181507,
+      "mean_absolute_error_percentage_points": 1.758558387118151,
+      "pearson_estimated_vs_true": 0.600615360151522,
+      "segment_family": "job_level",
+      "true_effect_range": 0.031486486486486484,
+      "true_effect_range_percentage_points": 3.1486486486486482
+    }
+  ],
+  "interpretation_policy": "These subgroup estimates are predeclared descriptive heterogeneous-treatment-effect analyses based on observed pre-treatment segments. They are not individual-level CATE scores and should not be interpreted as guaranteed treatment effects for a specific person.",
+  "method": "predefined_subgroup_means_of_cross_fitted_aipw_pseudo_outcomes",
+  "minimum_segment_n_policy": 100,
+  "n_segment_rows": 14,
+  "overall_mean_absolute_error": 0.017261535729212255,
+  "overall_mean_absolute_error_percentage_points": 1.7261535729212258,
+  "segment_definitions": [
+    "department",
+    "job_level",
+    "baseline_performance_tertile",
+    "baseline_engagement_tertile"
+  ],
+  "segment_definitions_use_ground_truth": false,
+  "small_segment_count": 0,
+  "true_effect_used_for_estimation": false,
+  "true_effect_used_for_evaluation_only": true
+}

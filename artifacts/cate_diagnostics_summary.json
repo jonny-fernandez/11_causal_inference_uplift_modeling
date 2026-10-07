@@ -1,0 +1,43 @@
+{
+  "decision_policy": "This checkpoint diagnoses the failed first CATE model. It does not tune a replacement model against synthetic truth. Any replacement method must be justified from these failure patterns and then evaluated as a separately documented model.",
+  "dispersion": {
+    "estimated_above_true_max_count": 204,
+    "estimated_above_true_max_fraction": 0.204,
+    "estimated_below_true_min_count": 118,
+    "estimated_below_true_min_fraction": 0.118,
+    "estimated_cate_mean": 0.12045267091625268,
+    "estimated_cate_std": 0.061029529283360924,
+    "estimated_to_true_std_ratio": 1.9088906720002525,
+    "negative_estimated_cate_count": 17,
+    "negative_estimated_cate_fraction": 0.017,
+    "true_ite_mean": 0.10762000000000001,
+    "true_ite_std": 0.031971202006771005
+  },
+  "evaluation_rows": 1000,
+  "pearson_correlation": -0.001778116060139542,
+  "ranking": {
+    "bottom_estimated_decile_true_ite_mean": 0.1081,
+    "decile_number_vs_true_mean_correlation": 0.18510993728895342,
+    "normalized_spread_recovery": 0.030898876404494346,
+    "observed_top_minus_bottom_true_ite_spread": 0.0032999999999999974,
+    "oracle_bottom_decile_true_ite_mean": 0.0632,
+    "oracle_top_decile_true_ite_mean": 0.17000000000000004,
+    "oracle_top_minus_bottom_true_ite_spread": 0.10680000000000003,
+    "spearman_rank_correlation": -0.017388457604021988,
+    "top_estimated_decile_true_ite_mean": 0.1114
+  },
+  "top_quartile": {
+    "estimated_top_group_count": 250,
+    "estimated_top_group_fraction": 0.25,
+    "estimated_top_quartile_cutoff": 0.16156151516552422,
+    "intersection_count": 137,
+    "jaccard": 0.21207430340557276,
+    "note": "If the true treatment effect has tied/discrete values, a >= 75th-percentile cutoff can produce a true 'top quartile' larger than 25% of the evaluation sample. Precision/recall/Jaccard are therefore more informative than the earlier overlap statistic.",
+    "precision": 0.548,
+    "recall": 0.2570356472795497,
+    "true_top_group_count": 533,
+    "true_top_group_fraction": 0.533,
+    "true_top_quartile_cutoff": 0.12
+  },
+  "unique_true_ite_values": 8
+}

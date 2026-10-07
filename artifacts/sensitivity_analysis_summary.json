@@ -1,0 +1,13 @@
+{
+  "all_estimates_positive": true,
+  "largest_absolute_propensity_sensitivity_shift_percentage_points": 0.11564288524754662,
+  "largest_propensity_sensitivity_shift_percentage_points": -0.11564288524754662,
+  "largest_propensity_sensitivity_shift_scenario": "empirical_common_support_only",
+  "maximum_estimate_percentage_points": 11.840286130975741,
+  "minimum_estimate_percentage_points": 11.597059664903043,
+  "n_propensity_sensitivity_scenarios": 6,
+  "n_scenarios": 9,
+  "overall_estimate_range_percentage_points": 0.2432264660726986,
+  "policy": "Sensitivity scenarios are reported separately from the primary estimate. The primary estimate is not replaced because another sensitivity scenario looks more favorable.",
+  "primary_scenario": "primary_propensity_recomputed_ipw"
+}

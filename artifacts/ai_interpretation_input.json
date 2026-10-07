@@ -1,0 +1,23 @@
+{
+  "individual_targeting_accepted": false,
+  "input_policy": "Aggregate verified artifacts only. No raw row-level records are supplied to the AI layer.",
+  "methodology_status": "methodology_locked",
+  "primary_estimand": "ATE",
+  "primary_estimator": "cross_fitted_augmented_inverse_probability_weighting",
+  "purpose": "Controlled qualitative interpretation of verified aggregate causal-analysis outputs.",
+  "segment_rows": 14,
+  "subgroup_hte_retained": true,
+  "verified_facts": {
+    "ai_boundary": "AI did not calculate or modify treatment effects, propensity scores, weights, confidence intervals, balance statistics, subgroup effects, or sensitivity results.",
+    "balance": "Post-weighting covariate balance passed the working threshold. Rows at or above absolute SMD 0.10: 0. Maximum post-weighting absolute SMD: 0.003854.",
+    "confidence_interval": "The 95 percent confidence interval runs from +9.12 to +14.56 percentage points.",
+    "identification_limitations": "Causal interpretation depends on consistency, conditional exchangeability, positivity, no interference, and correct temporal ordering. Observed diagnostics do not prove absence of unmeasured confounding.",
+    "individual_cate": "Individual-level CATE/uplift targeting was rejected after multiple validation failures. Qini and AUUC are not reported as successful final metrics.",
+    "overlap": "Observed propensity overlap passed the project diagnostic. Poor-overlap rows: 0.",
+    "primary_effect": "The locked primary estimator is cross-fitted AIPW. The estimated ATE is +11.84 percentage points.",
+    "sensitivity": "Sensitivity estimates remained tightly clustered. The observed range was +11.60 to +11.84 percentage points.",
+    "subgroup_hte": "Predefined subgroup HTE analysis was retained. The mean absolute subgroup error against synthetic truth was 1.73 percentage points.",
+    "synthetic_truth": "Synthetic ground truth was evaluation-only and was not used for training or causal estimation. The true synthetic ATE was +10.69 percentage points.",
+    "weights": "Extreme stabilized weights: 0. Effective sample size retained: 98.5%."
+  }
+}

@@ -1,0 +1,13 @@
+check_id,category,status,message,path
+required_files_present,completeness,PASS,All 27 required project files are present.,
+charts_complete,visualization,PASS,All six expected portfolio charts are present.,
+gitignore_required_entries,security,PASS,".gitignore excludes .env, Python bytecode, and __pycache__.",.gitignore
+env_syntax,configuration,PASS,".env syntax is valid. Keys found: AI_EXPLANATIONS_ENABLED, OPENAI_API_KEY, OPENAI_MODEL",.env
+env_not_tracked,security,PASS,.env is not tracked by Git.,.env
+secret_scan,security,PASS,No obvious API-key or private-key literals were detected outside .env.,
+locked_methodology_consistency,causal_integrity,PASS,"Locked methodology, final evaluation, and metadata agree on the primary estimator and effect.",
+ai_boundary_final,ai_governance,PASS,Final evaluation confirms AI was not used to calculate causal results.,
+ai_failure_isolation,ai_governance,PASS,AI interpretation status confirms the deterministic pipeline is isolated from AI success/failure.,
+deterministic_report_content,reporting,PASS,"Deterministic report preserves final status, AI boundary, and individual-CATE limitation.",outputs\causal_report.md
+ai_narrative_present,reporting,PASS,Controlled AI narrative artifact is present.,outputs\ai_causal_narrative.md
+pytest_suite,testing,PASS,Automated test suite passed with 46 tests.,

@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "2026-10-07T02:15:02.794334+00:00",
+  "git": {
+    "env_tracked": false,
+    "git_status": "A  .env.example\nA  .gitignore\nA  README.md\nA  artifacts/.gitkeep\nA  artifacts/ai_interpretation.json\nA  artifacts/ai_interpretation_input.json\nA  artifacts/ai_interpretation_status.json\nA  artifacts/aipw_crossfit_scores.csv\nA  artifacts/aipw_crossfit_summary.json\nA  artifacts/aipw_scores.csv\nA  artifacts/aipw_summary.json\nA  artifacts/ate_bootstrap_distribution.csv\nA  artifacts/ate_ground_truth_comparison.csv\nA  artifacts/ate_summary.json\nA  artifacts/balance_diagnostics.csv\nA  artifacts/balance_summary.json\nA  artifacts/cate_diagnostics_deciles.csv\nA  artifacts/cate_diagnostics_summary.json\nA  artifacts/cate_evaluation_scores.csv\nA  artifacts/cate_evaluation_summary.json\nA  artifacts/cate_final_evaluation_split.csv\nA  artifacts/cate_regularized_validation_scores.csv\nA  artifacts/cate_regularized_validation_summary.json\nA  artifacts/cate_slearner_validation_scores.csv\nA  artifacts/cate_slearner_validation_summary.json\nA  artifacts/cate_split_assignments.csv\nA  artifacts/failure_analysis_rows.csv\nA  artifacts/failure_analysis_summary.json\nA  artifacts/final_audit.json\nA  artifacts/final_audit_findings.csv\nA  artifacts/final_evaluation.json\nA  artifacts/final_evaluation_metrics.csv\nA  artifacts/ground_truth_evaluation.json\nA  artifacts/ipw_weights.csv\nA  artifacts/model_metadata.json\nA  artifacts/naive_baseline.json\nA  artifacts/propensity_diagnostics.json\nA  artifacts/propensity_scores.csv\nA  artifacts/segment_effects.csv\nA  artifacts/segment_effects_summary.json\nA  artifacts/sensitivity_analysis.csv\nA  artifacts/sensitivity_analysis_summary.json\nA  artifacts/weight_diagnostics.json\nA  config/final_methodology.json\nA  config/project_config.json\nA  data/raw/training_intervention_synthetic.csv\nA  data/reference/data_dictionary.csv\nA  data/reference/variable_policy.csv\nA  docs/Build_Guide.docx\nA  docs/Screenshot_Guide.docx\nA  docs/causal_design.md\nA  notebooks/.gitkeep\nA  outputs/.gitkeep\nA  requirements.txt\nA  requirements_optional.txt\nA  screenshots/.gitkeep\nA  screenshots/01_final_evaluation.png\nA  screenshots/02_reproducibility_metadata.png\nA  screenshots/03_deterministic_report.png\nA  screenshots/04_ai_guardrails_pass.png\nA  screenshots/05_pytest_46_passed.png\nA  screenshots/06_final_audit_pass.png\nA  src/__init__.py\nA  src/ai_interpretation.py\nA  src/aipw.py\nA  src/aipw_crossfit.py\nA  src/ate.py\nA  src/balance.py\nA  src/baseline.py\nA  src/cate.py\nA  src/cate_diagnostics.py\nA  src/cate_regularized.py\nA  src/cate_slearner.py\nA  src/causal_report.py\nA  src/data_contract.py\nA  src/failure_analysis.py\nA  src/final_audit.py\nA  src/final_evaluation.py\nA  src/ground_truth_evaluation.py\nA  src/inspect_data.py\nA  src/propensity.py\nA  src/reproducibility_metadata.py\nA  src/sensitivity_analysis.py\nA  src/subgroup_effects.py\nA  src/visualizations.py\nA  src/weighting.py\nA  tests/test_ai_guardrails.py\nA  tests/test_causal_pipeline.py\nA  tests/test_data_contract.py",
+    "is_git_repository": true
+  },
+  "next_gate": "Screenshot Word handoff and user confirmation before README/GitHub publication.",
+  "project": "11_causal_inference_uplift_modeling",
+  "secret_scan_hits": [],
+  "summary": {
+    "fail_count": 0,
+    "pass_count": 12,
+    "publication_ready_from_technical_audit": true,
+    "warn_count": 0
+  },
+  "test_suite": {
+    "failed": 0,
+    "output_tail": "..............................................                           [100%]\n46 passed in 5.44s",
+    "passed": 46,
+    "return_code": 0
+  }
+}

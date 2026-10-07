@@ -1,0 +1,63 @@
+{
+  "categorical_features": [
+    "department",
+    "job_level"
+  ],
+  "control": {
+    "count": 2800,
+    "maximum": 0.6185496034781057,
+    "mean": 0.43340491692812033,
+    "median": 0.4335077076236513,
+    "minimum": 0.24305265829791348,
+    "p01": 0.2991537468695404,
+    "p05": 0.33347073734247423,
+    "p25": 0.3918942637197489,
+    "p75": 0.4735767875691667,
+    "p95": 0.5349240605840566,
+    "p99": 0.574373586818404,
+    "std": 0.06025394037082002
+  },
+  "empirical_overlap_region": {
+    "lower": 0.24305265829791348,
+    "upper": 0.6185496034781057,
+    "valid": true
+  },
+  "extreme_propensity_counts": {
+    "above_0_90": 0,
+    "above_0_95": 0,
+    "below_0_05": 0,
+    "below_0_10": 0
+  },
+  "interpretation_policy": "Propensity scores describe estimated treatment-assignment probabilities conditional on approved pre-treatment covariates. Classification accuracy is not the primary objective. Overlap and covariate-balance diagnostics determine whether the scores are useful for causal adjustment.",
+  "model": "LogisticRegression",
+  "n_observations": 5000,
+  "numeric_features": [
+    "tenure_months",
+    "baseline_performance",
+    "baseline_engagement",
+    "prior_training_hours_12m",
+    "remote_work_ratio"
+  ],
+  "overall": {
+    "maximum": 0.6363363608934912,
+    "mean": 0.4399939629478874,
+    "minimum": 0.22253809176351097,
+    "std": 0.06071887647195141
+  },
+  "random_state": 42,
+  "treated": {
+    "count": 2200,
+    "maximum": 0.6363363608934912,
+    "mean": 0.44838002151850004,
+    "median": 0.4478524180360073,
+    "minimum": 0.22253809176351097,
+    "p01": 0.31093406376234145,
+    "p05": 0.3497879126226897,
+    "p25": 0.40774266208915,
+    "p75": 0.4877181967109761,
+    "p95": 0.5491182350755451,
+    "p99": 0.5956703666815972,
+    "std": 0.06028607110345442
+  },
+  "treatment_column": "training_assigned"
+}

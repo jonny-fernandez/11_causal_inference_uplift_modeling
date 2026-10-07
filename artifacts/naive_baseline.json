@@ -1,0 +1,26 @@
+{
+  "analysis": "naive_difference_in_means",
+  "causal_interpretation_allowed": false,
+  "confidence_interval": {
+    "lower": 0.10856566583102108,
+    "upper": 0.16312264585729047
+  },
+  "confidence_interval_percentage_points": {
+    "lower": 10.856566583102108,
+    "upper": 16.312264585729046
+  },
+  "confidence_level": 0.95,
+  "control_count": 2800,
+  "control_outcome_mean": 0.5064285714285715,
+  "control_value": 0,
+  "interpretation": "Unadjusted association only. Do not interpret as a causal treatment effect until overlap, confounding, covariate balance, and adjustment diagnostics are complete.",
+  "naive_difference": 0.13584415584415577,
+  "naive_difference_percentage_points": 13.584415584415577,
+  "outcome_column": "retained_or_promoted_180d",
+  "standard_error": 0.013917852689286104,
+  "standard_error_percentage_points": 1.3917852689286103,
+  "treated_count": 2200,
+  "treated_outcome_mean": 0.6422727272727272,
+  "treated_value": 1,
+  "treatment_column": "training_assigned"
+}

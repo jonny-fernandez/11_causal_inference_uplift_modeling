@@ -1,0 +1,403 @@
+{
+  "ai_boundary": {
+    "ai_used_for_cate_calculation": false,
+    "ai_used_for_causal_calculation": false,
+    "ai_used_for_confidence_interval_calculation": false,
+    "ai_used_for_propensity_calculation": false,
+    "ai_used_for_weight_calculation": false,
+    "future_ai_role": "Optional controlled interpretation of verified aggregate artifacts only."
+  },
+  "causal_design": {
+    "categorical_pre_treatment_covariates": [
+      "department",
+      "job_level"
+    ],
+    "evaluation_only_ground_truth": [
+      "true_propensity",
+      "true_individual_treatment_effect"
+    ],
+    "numeric_pre_treatment_covariates": [
+      "tenure_months",
+      "baseline_performance",
+      "baseline_engagement",
+      "prior_training_hours_12m",
+      "remote_work_ratio"
+    ],
+    "outcome": "retained_or_promoted_180d",
+    "post_treatment_exclusions": [
+      "post_training_completion"
+    ],
+    "primary_estimand": "ATE",
+    "primary_estimator": "cross_fitted_augmented_inverse_probability_weighting",
+    "treatment": "training_assigned"
+  },
+  "dataset": {
+    "columns": 13,
+    "exists": true,
+    "id_column": "person_id",
+    "outcome_column": "retained_or_promoted_180d",
+    "path": "data/raw/training_intervention_synthetic.csv",
+    "rows": 5000,
+    "sha256": "bd5860a16d07b74091735ad18c8c16cb8a11815ab17f22ffc99fb7f002e43509",
+    "treatment_column": "training_assigned"
+  },
+  "diagnostic_summary": {
+    "effective_sample_size_fraction": 0.9846342023085228,
+    "extreme_weight_count": 0,
+    "maximum_post_weighting_abs_smd": 0.0038535221511476277,
+    "poor_overlap_rows": 0,
+    "post_weighting_rows_at_or_above_abs_smd_0_10": 0,
+    "propensity_maximum": 0.6363363608934912,
+    "propensity_minimum": 0.22253809176351097,
+    "propensity_overlap_valid": true
+  },
+  "file_integrity": {
+    "artifact_files": [
+      {
+        "exists": true,
+        "path": "artifacts/naive_baseline.json",
+        "sha256": "a8c5e98a4d7df19eef33c10045cf0087090f7fce3e2120c5128ac72be14e66f4",
+        "size_bytes": 1023
+      },
+      {
+        "exists": true,
+        "path": "artifacts/propensity_diagnostics.json",
+        "sha256": "49a38cf61a5098400b605bbe7472c3a543602eed460d104c50c669cdabdf89ef",
+        "size_bytes": 1913
+      },
+      {
+        "exists": true,
+        "path": "artifacts/propensity_scores.csv",
+        "sha256": "6b2834e8c6c94f18167b46f8159cf2ab8cbe0512c4f48bf817eba2198448f542",
+        "size_bytes": 151562
+      },
+      {
+        "exists": true,
+        "path": "artifacts/propensity_model.joblib",
+        "sha256": "0cdd9b6f1e1079910102639503fe8d1eb689cdf2ca2ef72e578f050d114c2d59",
+        "size_bytes": 3953
+      },
+      {
+        "exists": true,
+        "path": "artifacts/ipw_weights.csv",
+        "sha256": "2bb8a227f98c6cc0a60f72ea2f496d0c9872d6db060c8b48e6376114c510a098",
+        "size_bytes": 336890
+      },
+      {
+        "exists": true,
+        "path": "artifacts/weight_diagnostics.json",
+        "sha256": "27bad42ba9013d997f654f54d475e33a86163dcc1cbda5cec979d8c73e193694",
+        "size_bytes": 3343
+      },
+      {
+        "exists": true,
+        "path": "artifacts/balance_diagnostics.csv",
+        "sha256": "33c7c308b9acaad3abf2d75febb1f4099919949f9fcc10f494511b6d8e68a52d",
+        "size_bytes": 3242
+      },
+      {
+        "exists": true,
+        "path": "artifacts/balance_summary.json",
+        "sha256": "598ef151770fc080d62b9ac5a91f2e83596d622eabda925a4abd71e24cc4c8ff",
+        "size_bytes": 1102
+      },
+      {
+        "exists": true,
+        "path": "artifacts/ate_summary.json",
+        "sha256": "8429e480928684d53dd4a34022a5c975c8bcfc570d347a923e3886f700b9f26d",
+        "size_bytes": 2059
+      },
+      {
+        "exists": true,
+        "path": "artifacts/ate_bootstrap_distribution.csv",
+        "sha256": "30a524a21f95605cbc70eaada4d6dffe0a3eca326b2d49aa37379cab822e7f54",
+        "size_bytes": 43475
+      },
+      {
+        "exists": true,
+        "path": "artifacts/aipw_scores.csv",
+        "sha256": "5ba965c0e19695d8a3fc7e3bf35ecb507150ce3562dc6b4bf3337f3f3df2eb48",
+        "size_bytes": 555189
+      },
+      {
+        "exists": true,
+        "path": "artifacts/aipw_summary.json",
+        "sha256": "68187a4895518fb23217de344c6728fe4e3b64eaa15de59f643eea66ebcdef7a",
+        "size_bytes": 2528
+      },
+      {
+        "exists": true,
+        "path": "artifacts/aipw_crossfit_scores.csv",
+        "sha256": "f9130e9a093746408f64ae53b3e34bee8fb6fe6bfb348b001a26313b6bed09fe",
+        "size_bytes": 557571
+      },
+      {
+        "exists": true,
+        "path": "artifacts/aipw_crossfit_summary.json",
+        "sha256": "2912562ecaa39d93d897705ce175c6bb752168821612ac9726f2d3127114f8d9",
+        "size_bytes": 2214
+      },
+      {
+        "exists": true,
+        "path": "artifacts/ground_truth_evaluation.json",
+        "sha256": "c7906d3f907a8e5d66181bf62ee06d6dbdafbe788a024af8eba4162c9da79cf7",
+        "size_bytes": 1479
+      },
+      {
+        "exists": true,
+        "path": "artifacts/ate_ground_truth_comparison.csv",
+        "sha256": "79ab21b574ecaa807c6be42c707c347fa30db34c1341d29468abe06a61938b24",
+        "size_bytes": 1029
+      },
+      {
+        "exists": true,
+        "path": "artifacts/failure_analysis_summary.json",
+        "sha256": "26b57edfd2b9b99b2df3312d7b9dadee77093cb0c7e4c8b7ef7ce4b11212a423",
+        "size_bytes": 2456
+      },
+      {
+        "exists": true,
+        "path": "artifacts/segment_effects.csv",
+        "sha256": "0c9e65ab48829193a3cc164c1afafb6d66277d9e51b2835fe05cad7d01c5e3b4",
+        "size_bytes": 4840
+      },
+      {
+        "exists": true,
+        "path": "artifacts/segment_effects_summary.json",
+        "sha256": "9d4bf680b6f9797fd53e76b4dce64e24ca181ca3ed0d029b56a9a00cfd409c5b",
+        "size_bytes": 3145
+      },
+      {
+        "exists": true,
+        "path": "artifacts/sensitivity_analysis.csv",
+        "sha256": "216af6dbcc1285a509e469c8dd8bc4de25fce532c75c9a4458686eacb3692c3d",
+        "size_bytes": 2472
+      },
+      {
+        "exists": true,
+        "path": "artifacts/sensitivity_analysis_summary.json",
+        "sha256": "97e3a1da2c22b5e92a5eeb499c33e7f5998dc853bc5823158307db0310c6eca2",
+        "size_bytes": 798
+      },
+      {
+        "exists": true,
+        "path": "artifacts/final_evaluation.json",
+        "sha256": "a09246c3b31801f9921ecd7bdce5400975ea679e764b7a47d245e8a4d36c61bd",
+        "size_bytes": 3118
+      },
+      {
+        "exists": true,
+        "path": "artifacts/final_evaluation_metrics.csv",
+        "sha256": "185648ee05e6e313e4148411f53d5524b091a83e695dc53deffc64744c5596eb",
+        "size_bytes": 713
+      }
+    ],
+    "final_evaluation": {
+      "exists": true,
+      "path": "artifacts/final_evaluation.json",
+      "sha256": "a09246c3b31801f9921ecd7bdce5400975ea679e764b7a47d245e8a4d36c61bd",
+      "size_bytes": 3118
+    },
+    "final_methodology": {
+      "exists": true,
+      "path": "config/final_methodology.json",
+      "sha256": "83e71e12fa3e2be4dc8f8d7d4b12ea6ae2357caff4186e6411a5f9973d411fec",
+      "size_bytes": 3375
+    },
+    "missing_key_artifacts": [],
+    "missing_key_source_files": [],
+    "project_config": {
+      "exists": true,
+      "path": "config/project_config.json",
+      "sha256": "ef49e19fd44a64657ea7a37e7fa0afb0daf6eb5f349d77822dce63804322bd3e",
+      "size_bytes": 410
+    },
+    "source_files": [
+      {
+        "exists": true,
+        "path": "src/data_contract.py",
+        "sha256": "e1641c694f414d6408df919bfd7ae341025c40e80524f277226600fa518c9564",
+        "size_bytes": 739
+      },
+      {
+        "exists": true,
+        "path": "src/baseline.py",
+        "sha256": "89cc36d5057eaa83d3d47eed7719cf33b7988f2ceeb89e04dc2c7cd13d26b2e5",
+        "size_bytes": 4297
+      },
+      {
+        "exists": true,
+        "path": "src/propensity.py",
+        "sha256": "c8d1479f0e0c4ec543697aa011e3a8314374b2491721e74653c4e449ca3a2a88",
+        "size_bytes": 10157
+      },
+      {
+        "exists": true,
+        "path": "src/balance.py",
+        "sha256": "2586c529c87392098322beeecb445accbafe4a570fb9e0e8a1d316d9a7e10e1a",
+        "size_bytes": 13962
+      },
+      {
+        "exists": true,
+        "path": "src/weighting.py",
+        "sha256": "3e6245638262b2139e106aa7bc3fdc4ff527b3dd6b97389db737955a1ce645fc",
+        "size_bytes": 12635
+      },
+      {
+        "exists": true,
+        "path": "src/ate.py",
+        "sha256": "0fad74b3c01f58b1c592d2001ce8ba2d95658c6d3b1e3538929d3cc237cb2ede",
+        "size_bytes": 17993
+      },
+      {
+        "exists": true,
+        "path": "src/aipw.py",
+        "sha256": "7b5a88c21be47fa6e7492d5566bdb841ef88419a157268904356b9234064177d",
+        "size_bytes": 18540
+      },
+      {
+        "exists": true,
+        "path": "src/aipw_crossfit.py",
+        "sha256": "1f8bd08c9e1cd05b511c9735197bc968410d237ec7abbf2a244b000df546cf9e",
+        "size_bytes": 19715
+      },
+      {
+        "exists": true,
+        "path": "src/ground_truth_evaluation.py",
+        "sha256": "81940f424d0e0d6fb325885f8fb5359b706581d020454e01b57843e2b7ed29b2",
+        "size_bytes": 13307
+      },
+      {
+        "exists": true,
+        "path": "src/failure_analysis.py",
+        "sha256": "a63b84f361ddb369ddb909a66e6841b7342a016d5bb6b2d4666d9a54c1c258df",
+        "size_bytes": 20425
+      },
+      {
+        "exists": true,
+        "path": "src/cate.py",
+        "sha256": "bbe51048e64e50b0c5caba33596f1dab12965d9689aef998b6b4c7ec7b5e427f",
+        "size_bytes": 14013
+      },
+      {
+        "exists": true,
+        "path": "src/cate_diagnostics.py",
+        "sha256": "c5d112c6dae9c2cb9105c48e211a9662641cf706481877f51fbc12adc4a19bc6",
+        "size_bytes": 13989
+      },
+      {
+        "exists": true,
+        "path": "src/cate_regularized.py",
+        "sha256": "0ce6929a6428627704fc89fc2f20711767ce462b22d622f5c7fac2b7cc0b9459",
+        "size_bytes": 19946
+      },
+      {
+        "exists": true,
+        "path": "src/cate_slearner.py",
+        "sha256": "1c3c8d1859ffed62ddbecdc897ce50c1dd68d7187178c43bc82268e7c2e0cfa4",
+        "size_bytes": 20691
+      },
+      {
+        "exists": true,
+        "path": "src/subgroup_effects.py",
+        "sha256": "b32f9280234f9d7e70c64f32f562eede8fa1e653c10a5f239fe5d3a3560363ea",
+        "size_bytes": 13971
+      },
+      {
+        "exists": true,
+        "path": "src/sensitivity_analysis.py",
+        "sha256": "b340fec158fba7545f3fc03705e93887a4b4ec65e897a9491e597a5b7bc28e7c",
+        "size_bytes": 17409
+      },
+      {
+        "exists": true,
+        "path": "src/final_evaluation.py",
+        "sha256": "d66ccda30d47ec20e6f3ae22f969b32523552c08ed045fdfdfdf7401b783f181",
+        "size_bytes": 18036
+      },
+      {
+        "exists": true,
+        "path": "src/reproducibility_metadata.py",
+        "sha256": "0ddff6cd3eebdd1cf52d78cd82272850a7b9ca158fa830f9fe8db19cb5b4e692",
+        "size_bytes": 13599
+      }
+    ]
+  },
+  "generated_at_utc": "2026-10-06T21:40:12.822135+00:00",
+  "heterogeneous_effects": {
+    "all_subgroup_cis_cover_true_effect": true,
+    "individual_cate_status": "rejected_for_final_targeting",
+    "subgroup_hte_status": "retained",
+    "subgroup_mean_absolute_error_percentage_points": 1.7261535729212258,
+    "subgroup_rows": 14,
+    "uplift_qini_auuc_status": "not_reported_as_success_metric"
+  },
+  "library_versions": {
+    "optional": {
+      "openai": "3.3.1",
+      "python-dotenv": "1.2.2",
+      "shap": "0.49.1",
+      "xgboost": "3.2.0"
+    },
+    "required": {
+      "joblib": "1.5.3",
+      "matplotlib": "3.10.9",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "pytest": "9.1.1",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "locked_result": {
+    "confidence_interval_percentage_points": {
+      "lower": 9.119335037344934,
+      "upper": 14.561237224606549
+    },
+    "confidence_level": 0.95,
+    "estimate": 0.11840286130975741,
+    "estimate_percentage_points": 11.840286130975741,
+    "standard_error": 0.013882658636042926,
+    "standard_error_percentage_points": 1.3882658636042926
+  },
+  "method_rejections": [
+    {
+      "method": "random_forest_dr_learner",
+      "reason": "Near-zero ranking correlation and excessive CATE dispersion."
+    },
+    {
+      "method": "regularized_dr_learner",
+      "reason": "Worse ranking recovery and greater dispersion."
+    },
+    {
+      "method": "interaction_s_learner",
+      "reason": "Improved calibration but negative ranking correlation and negative top-bottom true-effect spread."
+    }
+  ],
+  "project": {
+    "project_name": "Causal Inference & Uplift Modeling",
+    "project_number": 11,
+    "repository_folder": "11_causal_inference_uplift_modeling",
+    "synthetic_data_only": true
+  },
+  "randomness": {
+    "bootstrap_random_state": 42,
+    "cate_final_holdout_random_state": 137,
+    "cate_initial_random_state": 42,
+    "crossfit_random_state": 42,
+    "project_random_seed": 42,
+    "propensity_random_state": 42
+  },
+  "runtime": {
+    "executable": "C:\\Users\\Jonny Fernandez\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python_implementation": "CPython",
+    "python_version": "3.10.11"
+  },
+  "sensitivity_summary": {
+    "all_estimates_positive": true,
+    "largest_absolute_propensity_shift_percentage_points": 0.11564288524754662,
+    "maximum_estimate_percentage_points": 11.840286130975741,
+    "minimum_estimate_percentage_points": 11.597059664903043,
+    "range_width_percentage_points": 0.2432264660726986
+  }
+}

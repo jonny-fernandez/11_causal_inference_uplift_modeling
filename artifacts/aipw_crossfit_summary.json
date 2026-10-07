@@ -1,0 +1,48 @@
+{
+  "comparison": {
+    "crossfit_minus_ipw": 0.0012758358082515242,
+    "crossfit_minus_ipw_percentage_points": 0.12758358082515242,
+    "crossfit_minus_non_crossfit": 0.000955002165780719,
+    "crossfit_minus_non_crossfit_percentage_points": 0.0955002165780719,
+    "ipw_ate": 0.11712702550150589,
+    "ipw_ate_percentage_points": 11.712702550150588,
+    "non_crossfit_aipw_ate": 0.1174478591439767,
+    "non_crossfit_aipw_ate_percentage_points": 11.744785914397669
+  },
+  "confidence_interval": {
+    "lower": 0.09119335037344933,
+    "upper": 0.1456123722460655
+  },
+  "confidence_interval_percentage_points": {
+    "lower": 9.119335037344934,
+    "upper": 14.561237224606549
+  },
+  "confidence_level": 0.95,
+  "cross_fitted": true,
+  "crossfit_aipw_ate": 0.11840286130975741,
+  "crossfit_aipw_ate_percentage_points": 11.840286130975741,
+  "estimand": "ATE",
+  "estimator": "cross_fitted_augmented_inverse_probability_weighting",
+  "interpretation": "Each row's propensity score and potential-outcome predictions were generated from nuisance models that did not train on that row. Under the stated identification assumptions, the resulting AIPW estimate targets the average treatment effect.",
+  "limitations": [
+    "Cross-fitting reduces own-observation nuisance-model overfitting but does not remove unmeasured confounding.",
+    "Observed overlap and balance remain diagnostic evidence, not proof of causal identification.",
+    "The confidence interval uses an influence-function normal approximation.",
+    "Synthetic ground-truth treatment-effect fields remain excluded from estimator fitting."
+  ],
+  "n_observations": 5000,
+  "n_splits": 5,
+  "oof_nuisance_summary": {
+    "mean_mu0_oof": 0.5142334801978251,
+    "mean_mu1_minus_mu0_oof": 0.1177701243980606,
+    "mean_mu1_oof": 0.6320036045958858,
+    "propensity_max": 0.6460462803671025,
+    "propensity_mean": 0.4402651874845883,
+    "propensity_min": 0.22807293170016352
+  },
+  "random_state": 42,
+  "shuffle": true,
+  "standard_error": 0.013882658636042926,
+  "standard_error_percentage_points": 1.3882658636042926,
+  "uncertainty_method": "cross_fitted_influence_function_normal_approximation"
+}

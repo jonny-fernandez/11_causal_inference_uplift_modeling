@@ -1,0 +1,37 @@
+{
+  "development_fraction": 0.8,
+  "development_n": 4000,
+  "evaluation_distribution": {
+    "estimated_cate_maximum": 0.34851623546625793,
+    "estimated_cate_median": 0.1184448732017979,
+    "estimated_cate_minimum": -0.07760897286357088,
+    "estimated_cate_p05": 0.027105970025493746,
+    "estimated_cate_p95": 0.22226833521122707,
+    "true_ite_maximum": 0.17,
+    "true_ite_median": 0.12,
+    "true_ite_minimum": 0.05
+  },
+  "evaluation_n": 1000,
+  "evaluation_only_ground_truth": true,
+  "interpretation": "The CATE model is trained on cross-fitted AIPW pseudo-outcomes from the development sample only. The untouched evaluation sample is scored without using its outcomes or synthetic individual treatment effects for fitting. Synthetic individual treatment effects are opened only after prediction to evaluate CATE recovery.",
+  "method": "dr_learner_random_forest_on_cross_fitted_aipw_pseudo_outcomes",
+  "metrics": {
+    "mae": 0.05598398641126351,
+    "mean_signed_error": 0.012832670916252722,
+    "pearson_correlation": -0.001778116060139511,
+    "pehe": 0.07009724545522794,
+    "rmse": 0.07009724545522794,
+    "spearman_rank_correlation": -0.017388457604021988,
+    "top_quartile_overlap": 0.548
+  },
+  "model_configuration": {
+    "max_depth": 6,
+    "max_features": 0.8,
+    "min_samples_leaf": 30,
+    "n_estimators": 400,
+    "regressor": "RandomForestRegressor"
+  },
+  "random_state": 42,
+  "true_ite_used_for_model_selection": false,
+  "true_ite_used_for_training": false
+}
